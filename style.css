@@ -122,6 +122,9 @@ figure:hover > .image-view { /* hover effect for equilibrium image */
 }
 
 @media screen and (min-width: 700px) {
+    body {
+        margin: 50px;
+    }
     .content-card {
         width: 350px;
         height: 596px;
