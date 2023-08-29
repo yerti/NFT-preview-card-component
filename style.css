@@ -1,0 +1,140 @@
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue: hsl(217, 54%, 11%);
+    --dark-blue: hsl(216, 50%, 16%);
+    --blue: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--Very-dark-blue);
+    font-family: 'Outfit', sans-serif;
+}
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-card {
+    width: 327px;
+    height: 543px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--dark-blue);
+}
+
+/* styles for the image equilibrium */
+.image-equilibrium {
+    width: 278px;
+    height: 278px;
+    border-radius: 8px;
+}
+figure {
+    position: relative;
+    display: flex;
+}
+figure .image-view {
+    width: 100%;
+    height: 278px;
+    position: absolute;
+    top: 0;
+    padding-left: 114px;
+    padding-top: 111px;
+    background: hsl(178, 100%, 50%, 0.3);
+    opacity: 0;
+    transition: all 500ms ease-out;
+    visibility: hidden;
+    border-radius: 8px;
+}
+figure:hover > .image-view { /* hover effect for equilibrium image */
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer;
+}
+
+/* styles for the card content class */
+.content-text h2 {
+    color: var(--White);
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.content-text h2:hover { /* hover effect for the subtitle of the card content class */
+    color: var(--Cyan);
+    cursor: pointer;
+}
+.content-text p {
+    color: var(--Soft-blue);
+    margin-bottom: 20px;
+}
+
+/* styles for class content information */
+.content-information {
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #979797;
+}
+.p-ethereum {
+    margin-right: 98px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--Cyan);
+}
+.p-clock {
+    color: var(--Soft-blue);
+}
+
+/* styles for class information avatar */
+.information-avatar {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+.image-avatar {
+    width: 33px;
+    height: 33px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    margin-right: 26px;
+    margin-left: -34px;
+}
+.information-avatar p {
+    color: var(--Soft-blue);
+}
+.information-avatar p span {
+    color: var(--White);
+}
+.information-avatar p span:hover { /* hover effect for class paragraph span avatar info */
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 700px) {
+    .content-card {
+        width: 350px;
+        height: 596px;
+        padding: 36px;
+    }
+    .content-text h2  {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .content-text p {
+        margin-bottom: 22px;
+    }
+    .information-avatar {
+        margin-top: 30px;
+    }
+}
